@@ -90,7 +90,78 @@ print(student)
 
 print(student['courses'][1:])
 
-print(student.get('name')
+print(student.get('name'))
 
-for key, value in student.items():
-    print(f"{key} ===> {value}")
+
+#  looping through key-pairs
+
+for key,value in student.items():
+    print(f"{key} ====>>> {value}")
+
+# looping through keys
+for key in student.keys():
+    print(key)
+
+# looping through values
+
+for value in student.values():
+    print(value)
+
+
+
+## Nesting
+
+# A list of Dictionaries
+
+user_1 = {'name':'joe', 'username':'joeki1'}
+user_2 = {'name':'zaira', 'username':'zaihaha4'}
+user_3 = {'name':'baila', 'username':'ball83'}
+
+users = [user_1, user_2, user_3]
+
+for user in users:
+    print(user)
+
+# game of aliens
+
+# make an empty lists
+aliens = []
+
+# make 20 aliens
+
+for alien_number in  range(20):
+    new_alien = {'name':'zumba', 'color':'red', 'points':15, 'speed':'fast'}
+    aliens.append(new_alien)
+
+print(aliens[:6])
+
+print(len(aliens))
+
+for alien in aliens[:6]:
+    if alien['name'] == 'zumba':
+        alien['name'] = 'zadna'
+        alien['color'] = 'blue'
+        alien['points'] = 10
+        alien['speed'] = 'medium'
+
+print(aliens[:6])
+
+
+# A list in a dictionary
+
+student = {'name':'sally', 'subjects':['python', 'information security', 'physics']}
+
+for key,value in student.items():
+    print(key, value)
+
+favorite_languages = {
+	'jen':['python', 'rust'],
+	'sarah':['c', 'c#'],
+	'edward':['rust', 'go'],
+	'phil':['python', 'haskell']}
+print(favorite_languages)
+
+for name, languages in favorite_languages.items():
+    print(name, languages)
+    for language in languages:
+        print(language.title())
